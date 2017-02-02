@@ -1,0 +1,413 @@
+/*********************************************************************
+** Program Filename: lab8.cpp
+** Author: Joel Smith 
+** Date: February 28, 2015
+** Description: lab3
+** Input: User choice of inputs
+** Output: No output
+*********************************************************************/
+
+
+#include <iostream>
+#include <string>
+#include "linkedList.hpp"
+#include "linkedList.cpp"
+
+int main() 
+{
+
+	std::cout << "User: Welcome to lab8, the linked list maze." << std::endl << std::endl;
+
+	std::cout << "User: Enter the letter \"n\" no turn off labels. Enter anything else to turn on labels." << std::endl << std::endl;
+
+	std::string currentPosition;
+
+	currentPosition = "room1";
+
+	bool labels = true;
+
+	LinkedList roomList;
+
+	
+
+	LinkedList::ListNode* room1Ptr = roomList.add("room1");
+
+	
+
+	
+
+	LinkedList::ListNode* room2Ptr = roomList.add("room2");
+
+	
+
+	LinkedList::ListNode* room3Ptr =roomList.add("room3");
+
+	LinkedList::ListNode* room4Ptr = roomList.add("room4");
+
+	LinkedList::ListNode* room5Ptr = roomList.add("room5");
+
+	LinkedList::ListNode* room6Ptr = roomList.add("room6");
+		
+	LinkedList::ListNode* room7Ptr = roomList.add("room7");
+
+	LinkedList::ListNode* room8Ptr = roomList.add("room8");
+
+	LinkedList::ListNode* room9Ptr = roomList.add("room9");
+
+	LinkedList::ListNode* room10Ptr = roomList.add("room10");
+
+	
+
+	LinkedList::ListNode* thekeepPtr = roomList.add("thekeep");
+
+	LinkedList::ListNode* thecasinoPtr = roomList.add("thecasino");
+
+	LinkedList::ListNode* thecemeteryPtr = roomList.add("thecemetery");
+
+	LinkedList::ListNode* thecontrolroomPtr = roomList.add("thecontrolroom");
+
+	LinkedList::ListNode* thearmoryPtr = roomList.add("thearmory");
+
+	LinkedList::ListNode* theexitPtr = roomList.add("theexit");
+
+	//displays the linked list
+	//roomList.displayList();
+	
+
+
+
+	
+
+	LinkedList::ListNode *nodePtr2 = roomList.head;
+
+	//nodePtr->next = nodePtr; //next node in linked list
+
+	//room1
+	//modify doors
+	nodePtr2->left = NULL;
+	nodePtr2->right = room2Ptr;
+	nodePtr2->down = NULL;
+	nodePtr2->up = NULL;	
+	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//room2
+	//modify doors
+	nodePtr2->left = room1Ptr;
+	nodePtr2->right = thekeepPtr;
+	nodePtr2->down = room3Ptr;
+	nodePtr2->up = NULL;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify doors room 3
+	nodePtr2->left = NULL;
+	nodePtr2->right = NULL;
+	nodePtr2->down = thecasinoPtr;
+	nodePtr2->up = room2Ptr;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify doors room 4
+	nodePtr2->left = NULL;
+	nodePtr2->right = NULL;
+	nodePtr2->down = NULL;
+	nodePtr2->up = thekeepPtr;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify doors room5
+	nodePtr2->left = NULL;
+	nodePtr2->right = thecasinoPtr;
+	nodePtr2->down = room6Ptr;
+	nodePtr2->up = NULL;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify doors room6
+	nodePtr2->left = NULL;
+	nodePtr2->right = NULL;
+	nodePtr2->down = room7Ptr;
+	nodePtr2->up = room5Ptr;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify doors room7
+	nodePtr2->left = NULL;
+	nodePtr2->right = room9Ptr;
+	nodePtr2->down = NULL;
+	nodePtr2->up = room6Ptr;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	
+	//modify doors room8
+	nodePtr2->left = room7Ptr;
+	nodePtr2->right = room9Ptr;
+	nodePtr2->down = thearmoryPtr;
+	nodePtr2->up = NULL;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify doors room9
+	nodePtr2->left = room8Ptr;
+	nodePtr2->right = room10Ptr;
+	nodePtr2->down = NULL;
+	nodePtr2->up = thecemeteryPtr;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify room10
+	nodePtr2->left = room9Ptr;
+	nodePtr2->right = NULL;
+	nodePtr2->down = theexitPtr;
+	nodePtr2->up = thecontrolroomPtr;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+
+
+
+
+	
+	//modify doors keep
+	nodePtr2->left = room2Ptr;
+	nodePtr2->right = NULL;
+	nodePtr2->down = room4Ptr;
+	nodePtr2->up = NULL;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify doors casino 
+	nodePtr2->left = room5Ptr;
+	nodePtr2->right = thecemeteryPtr;
+	nodePtr2->down = NULL;
+	nodePtr2->up = room3Ptr;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify doors cemetery
+	nodePtr2->left = thecasinoPtr;
+	nodePtr2->right = NULL;
+	nodePtr2->down = room9Ptr;
+	nodePtr2->up = NULL;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify doors controlroom
+	nodePtr2->left = room2Ptr;
+	nodePtr2->right = NULL;
+	nodePtr2->down = room2Ptr;
+	nodePtr2->up = NULL;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify doors armory
+	nodePtr2->left = NULL;
+	nodePtr2->right = NULL;
+	nodePtr2->down = room10Ptr;
+	nodePtr2->up = NULL;	
+	
+	nodePtr2 = nodePtr2->next; //next node in linked list
+	
+	//modify doors exit
+	nodePtr2->left = NULL;
+	nodePtr2->right = NULL;
+	nodePtr2->down = NULL;
+	nodePtr2->up = room10Ptr;
+
+	//nodePtr2->next = NULL;	
+
+
+	
+
+	
+	
+	
+	
+	
+
+
+	
+
+
+
+	
+
+	LinkedList::ListNode *nodePtr = roomList.head; 
+	while (currentPosition != "theexit")
+	{
+
+		
+
+		
+
+		//nodePtr->next != NULL //check for end
+
+	
+		if (labels == true)
+		{
+
+			
+
+			std::cout << "You are currently in room: " << currentPosition << std::endl << std::endl;
+
+			
+
+			
+		}
+
+
+
+		std::string choice;
+
+		std::cout << "User: Enter \"up\" to go up, \"down\" to go down, \"left\" to go left, \"right\" to go right. Enter \"q\" to quit" << std::endl << std::endl;
+
+		std::cout << "User: press \"1\" to cheat and display the room list with connections. " << std::endl << std::endl;
+
+		std::cin >> choice;
+
+		std::cout << std::endl;
+
+		while (std::cin.fail())
+		{
+
+		std::cout << "Invalid value. Enter again: ";
+		std::cin.clear();
+		std::cin.ignore(9999, '\n');
+		std::cin >> choice;
+
+
+		}
+
+
+
+		
+
+		if (choice == "1")
+		{
+
+			roomList.displayList();
+
+			std::cout << std::endl;
+
+			roomList.displayListPtrs();
+
+		}
+
+		if (choice == "n")
+		{
+
+			labels = false;
+
+		}
+
+		if (choice == "up")
+		{
+
+			if (nodePtr->up != NULL)
+			{
+
+				nodePtr = nodePtr->up;
+
+				currentPosition = nodePtr->label;
+
+
+			}
+			else
+			{
+
+				
+
+				std::cout << "You cannot go that way. There is no door. " << std::endl << std::endl;
+
+				std::cout << std::endl;
+
+				std::cout << std::endl;
+
+			}
+
+			
+
+		}
+
+		else if (choice == "down")
+		{
+
+			if (nodePtr->down != NULL)
+			{
+
+				nodePtr = nodePtr->down;
+
+				currentPosition = nodePtr->label;
+
+
+			}
+
+			else
+			{
+
+				std::cout << "You cannot go that way. There is no door. " << std::endl << std::endl;
+
+			}
+		
+		}
+
+		else if (choice == "left")
+		{
+
+			if (nodePtr->left != NULL)
+			{
+
+				nodePtr = nodePtr->left;
+
+				currentPosition = nodePtr->label;
+
+
+			}
+			else
+			{
+
+				std::cout << "You cannot go that way. There is no door. " << std::endl << std::endl;
+
+			}
+
+		}
+
+		else if (choice == "right")
+		{
+
+			if (nodePtr->right != NULL)
+			{
+
+				
+
+				nodePtr = nodePtr->right;
+
+				currentPosition = nodePtr->label;
+
+
+			}
+			else
+			{
+
+				std::cout << "You cannot go that way. There is no door. " << std::endl << std::endl;
+
+			}
+
+		}
+
+		else if (choice == "q")
+		{
+
+			return 1;
+
+		}
+
+
+	}
+
+	std::cout << "You reached the end of the maze!" << std::endl;
+
+	
+}

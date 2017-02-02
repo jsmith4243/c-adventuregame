@@ -1,0 +1,8 @@
+class ComputerCore : public Room
+{
+
+	public:
+
+		void interact(Player& player1);
+
+};

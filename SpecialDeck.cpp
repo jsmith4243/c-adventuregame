@@ -1,0 +1,37 @@
+void SpecialDeck::roomAction(Player& player1)
+{
+
+	if ((player1.Done1==true) && player1.Done2==false)
+	{
+
+		std::cout << "Sargent Brown is dead on the floor." << std::endl;
+
+		std::cout << "Next to him is the operating system disk for the main computer." << std::endl;
+
+		std::cout << "Enter \"interact\" to pick it up" << std::endl <<std::endl;
+
+	}
+
+}
+
+void SpecialDeck::interact(Player& player1)
+{
+
+	if (player1.Done1==true && player1.Done2==false)
+	{
+
+
+	std::cout << "You picked up a operating system disk" << std::endl << std::endl;
+
+	player1.addInventoryObject("osdisk");
+
+	player1.Done2 = true;
+
+	}
+	
+
+
+
+	
+
+}

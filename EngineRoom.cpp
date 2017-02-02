@@ -1,0 +1,32 @@
+void EngineRoom::roomAction(Player& player1)
+{
+
+	if (player1.Done9 == true && player1.Done10 == false)
+	{
+
+		std::cout << "You fight your way into the Engine room. Dead pirates are everywhere. " << std::endl << std::endl;
+
+		
+
+	} 
+
+}
+
+void EngineRoom::interact(Player& player1)
+{
+
+
+	if (player1.Done9 == true && player1.Done10 == false)
+	{
+
+		std::cout << "You turn on the engines. A loud roar shakes the ship as the engines roar to life.  " << std::endl << std::endl;
+
+		player1.Done10 = true;
+
+		
+
+	} 
+
+	
+
+}

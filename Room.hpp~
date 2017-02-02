@@ -1,0 +1,11 @@
+class Room
+{
+
+	public:
+
+		virtual void roomAction(Player& player1);
+
+
+		friend Player;
+
+};

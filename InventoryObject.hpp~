@@ -1,0 +1,12 @@
+class InventoryObject
+{
+
+	public:
+
+	std::string label;
+
+	InventoryObject(std::string label1);
+
+	
+
+};

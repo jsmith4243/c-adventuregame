@@ -1,0 +1,84 @@
+void Player::addInventoryObject(std::string label1)
+{
+
+	inventoryVector.push_back(new InventoryObject(label1));
+
+}
+
+bool Player::isInInventory(std::string label1)
+{
+
+	//inventoryVector<InventoryObject*>::iterator iterator1;
+	std::vector<InventoryObject*>::iterator iterator1;
+
+	for(iterator1 = inventoryVector.begin(); iterator1 != inventoryVector.end(); iterator1++)
+	{
+
+		if ((*iterator1)->label == label1)
+		{
+
+			return true;
+		}
+		
+		
+		
+
+
+	}
+	return false;
+
+}
+
+Player::Player()
+{
+
+		quest1Done = false;
+
+		quest2Done = false;
+
+		quest3Done = false;
+
+		quest4Done = false;
+
+		bool quest5Done;
+
+		//tasks 1-17
+
+		bool Done1;
+
+		bool Done2;
+
+		bool Done3;
+
+		bool Done4;
+
+		bool Done5;
+
+		bool Done6;
+
+		bool Done7;
+
+		bool Done8;
+
+		bool Done9;
+
+		bool Done10;
+
+		bool Done11;
+
+		bool Done12;
+
+		bool Done13;
+
+		bool Done14;
+
+		bool Done15;
+
+		bool Done16;
+
+		bool Done17;
+
+		bool isDead;
+
+		bool wonGame;
+}

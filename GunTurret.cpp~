@@ -1,0 +1,27 @@
+void GunTurret::roomAction(Player& player1)
+{
+
+
+	if (player1.Done4 == true && player1.Done5 == false)
+	{
+
+		std::cout << "The gun turret has only one round of ammunition left." << std::endl << std::endl;
+
+	} 
+
+	
+
+}
+
+void GunTurret::interact(Player& player1)
+{
+
+	if (player1.Done4 == true && player1.Done5 == false)
+	{
+
+		std::cout << "You loaded a round into the gun turret gun" << std::endl;
+
+		player1.Done5 = true;
+
+	}
+}

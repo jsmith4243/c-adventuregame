@@ -1,0 +1,8 @@
+class ControlRoom : public Room
+{
+
+	public:
+
+		void interact(Player& player1);
+
+};
